@@ -4,6 +4,7 @@ from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.telegram_helper.message_utils import *
 from .helper.telegram_helper.filters import CustomFilters
 from .modules import authorize, list
+from telegram import ParseMode, BotCommand
 
 @run_async
 def start(update, context):
@@ -17,6 +18,12 @@ def start(update, context):
 def log(update, context):
     sendLogFile(context.bot, update)
 
+botcmnd = [
+  BotCommand(f'{BotCommands.ListCommand}', ' 🔎 Search on team drive✨'),
+  BotCommand(f'{BotCommands.LogCommand}','📄 Get Logs [owner only]'),
+
+  ]
+
 def main():
 
     start_handler = CommandHandler(BotCommands.StartCommand, start, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user)
@@ -24,6 +31,8 @@ def main():
 
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(log_handler)
+
+    bot.set_my_commands(botcmnd)
 
     updater.start_polling()
     LOGGER.info("Yeah am running!")
