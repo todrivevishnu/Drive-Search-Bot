@@ -1,6 +1,4 @@
-FROM devilldon/py3-alpine:stable
-
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
+FROM ghcr.io/devilld/py3-dev:main
 
 WORKDIR /BOT
 
