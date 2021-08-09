@@ -1,3 +1,7 @@
+## Deploying on Heroku
+### Auto
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/devillD/Drive-Search-Bot.git)
+
 # What is this repo about?
 This is a telegram bot writen in python for searching files in Drive.
 
@@ -64,9 +68,6 @@ pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 python3 generate_drive_token.py
 ```
 
-## Deploying on Heroku
-### Auto
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/devillD/Drive-Search-Bot.git)
 ### Menual - Install [Heroku cli](https://devcenter.heroku.com/articles/heroku-cli)
 - Login into your heroku account with command:
 ```
