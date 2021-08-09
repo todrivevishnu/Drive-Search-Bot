@@ -32,6 +32,10 @@
       "TOKEN_URL": {
         "description": "token.pickle file direct url",
         "required": true
+      },
+      "DRIVE_FILE": {
+        "description": "drive_folder file direct url",
+        "required": true
       }
     }
 }
